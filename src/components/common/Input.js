@@ -20,6 +20,7 @@ const Input = ({ label, value, onChangeText, placeholder, secureTextEntry }) => 
 
 Input.propTypes = {
   label: React.PropTypes.string.isRequired,
+  value: React.PropTypes.string,
   placeholder: React.PropTypes.string.isRequired,
   secureTextEntry: React.PropTypes.bool,
   onChangeText: React.PropTypes.func

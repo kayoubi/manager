@@ -37,6 +37,7 @@ class LoginForm extends Component {
             label="Email"
             placeholder="user@email.com"
             onChangeText={this.onEmailChanged.bind(this)}
+            value={this.props.email}
           />
         </CardSection>
 
@@ -46,6 +47,7 @@ class LoginForm extends Component {
             label="Password"
             placeholder="password"
             onChangeText={this.onPasswordChanged.bind(this)}
+            value={this.props.password}
           />
         </CardSection>
 
