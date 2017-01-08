@@ -1,19 +1,28 @@
 import React, { Component } from 'react';
-import { Text, View } from 'react-native';
+import { Text, TouchableWithoutFeedback, View } from 'react-native';
+import { connect } from 'react-redux'
+
+import { selectEmployee } from '../actions'
 import { CardSection } from './common';
 
 class ListItem extends Component {
+  viewEmployee() {
+    this.props.selectEmployee(this.props.employee);
+  }
+
   render() {
     const { name } = this.props.employee;
 
     return (
-      <View>
-        <CardSection>
-          <Text style={styles.titleStyle}>
-            {name}
-          </Text>
-        </CardSection>
-      </View>
+      <TouchableWithoutFeedback onPress={this.viewEmployee.bind(this)}>
+        <View>
+          <CardSection>
+            <Text style={styles.titleStyle}>
+              {name}
+            </Text>
+          </CardSection>
+        </View>
+      </TouchableWithoutFeedback>
     );
   }
 }
@@ -29,4 +38,4 @@ const styles = {
   }
 };
 
-export default ListItem;
+export default connect(null, {selectEmployee})(ListItem);
