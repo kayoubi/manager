@@ -6,3 +6,4 @@ export const LOGIN_FAILED = 'login_failed'
 
 export const EMPLOYEE_UPDATE = 'employee_update'
 export const EMPLOYEE_SAVE = 'employee_save'
+export const EMPLOYEE_LIST = 'employee_list'
