@@ -15,7 +15,6 @@ export default (state = INIT_STATE, action) => {
     case LOGIN_FAILED:
       return {...state, error: "Authentication Failed", loading: false}
     default:
-      console.log('don"t know')
       return state
   }
 }
